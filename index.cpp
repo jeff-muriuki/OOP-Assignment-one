@@ -180,11 +180,11 @@ int main()
 {
     Library library;
 
-    // Adding books to the library
+    // Adding books
     library.addBook(Book("The River and the Source", "Margaret A. Ogola", "1527304"));
     library.addBook(Book("Gifted Hands", "Ben Carson", "3388410"));
 
-    // Adding users to the library system
+    // Adding users
     library.addUser(User("USER1", "Kasongo"));
     library.addUser(User("USER2", "Zakayo"));
 
@@ -192,7 +192,7 @@ int main()
     Book *book1 = library.searchBookByTitle("The River and the Source");
     Book *book2 = library.searchBookByBookNumber("3388410");
 
-    // Borrowing and returning books
+    // Borrowing & returning books
     User *user1 = library.findUserByID("USER1");
     if (user1 && book1)
     {
@@ -201,7 +201,7 @@ int main()
         user1->returnBook(book1);
     }
 
-    // Display all books in the library
+    // Display all books
     library.displayAllBooks();
 
     return 0;
